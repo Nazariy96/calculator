@@ -1,0 +1,97 @@
+body {
+  background: -webkit-gradient(linear, left top, right top, from(#3f87a6), color-stop(#ebf8e1), to(#f69d3c));
+  background: linear-gradient(0.25turn, #3f87a6, #ebf8e1, #f69d3c);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: auto;
+          flex-direction: auto;
+  margin: auto;
+  padding: 0%;
+  min-height: 100vh;
+  max-width: 95%;
+}
+
+.c-calc {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 300px;
+  border-radius: 20px;
+  border: 1px solid #0088a046;
+  background-color: #0095892f;
+}
+
+.c-calc_input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: auto;
+      -ms-flex-align: auto;
+          align-items: auto;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+}
+
+.c-calc_input-prev, .c-calc_input-curr {
+  margin: 0.5rem;
+  padding: 0.5rem;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  width: auto;
+  text-align: right;
+  font-size: 2em;
+  color: white;
+  border-radius: 20px;
+  background-color: rgba(0, 0, 0, 0.329);
+}
+
+.c-calc_btns {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  margin: 1em;
+}
+
+.c-calc_btns-btn {
+  margin: 2px;
+  padding: auto;
+  border-radius: 10px;
+  font-size: 2em;
+}
+
+.c-calc_btns-btn:hover {
+  cursor: pointer;
+  background-color: #0088a046;
+}
+
+.c-calc_btns-btn:active {
+  background-color: #f69d3c;
+}
+/*# sourceMappingURL=style.css.map */

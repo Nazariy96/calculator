@@ -1,0 +1,77 @@
+$blue: #3f87a6;
+$blue-trp:#0088a046;
+$green: #ebf8e1;
+$green-trp:#0095892f;
+$orange:#f69d3c;
+
+@mixin flexBsc($j-c, $a-i, $f-d) {
+  display: flex;
+  justify-content: $j-c;
+  align-items: $a-i;
+  flex-direction: $f-d;
+}
+
+@mixin marginPadding ($m, $p) {
+  margin: $m;
+  padding: $p;
+}
+
+body {
+  background: linear-gradient(0.25turn, $blue, $green, $orange);
+
+  @include flexBsc (center, center, auto);
+  @include marginPadding(auto, 0%);
+  
+  min-height: 100vh;
+  max-width: 95%;
+
+}
+
+.c-calc {
+  @include flexBsc(center, center, column);
+
+  max-width: 300px;
+  
+  border-radius: 20px;
+  border: 1px solid $blue-trp;
+
+  background-color: $green-trp;
+  &_input {
+    @include flexBsc(center, auto, column);
+
+    width: 100%;
+    &-prev, &-curr {
+      @include marginPadding(0.5rem,0.5rem );
+      height: fit-content;
+      width: auto;
+      
+      text-align: right;
+      font-size: 2em;
+      color: white;
+    
+      border-radius: 20px;
+
+      background-color: rgba(0, 0, 0, 0.329);
+    }
+  }
+
+  &_btns {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+
+    margin: 1em;
+    &-btn {
+      @include marginPadding(2px,auto);
+
+      border-radius: 10px;
+      font-size: 2em;
+      &:hover {
+        cursor: pointer;
+        background-color: $blue-trp ;
+      }
+      &:active{
+        background-color: $orange ;
+      }
+    }
+  }
+}
