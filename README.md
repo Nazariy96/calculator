@@ -1,21 +1,21 @@
 # calculator
 
-Calculator with basics functions, for practice basics of:\
+Calculator with basics functions, for practice basics of:
 
 -DOM-\
-  Manipulation and dynamic generation\
+  Manipulation and dynamic generation
 
 -JavaScript-\
-  Methods used:\ 
+  Methods used:\
     eval()\
     parseFloat()\
     toFixed()\
     split()\
     slice()\
-    indexOf()\
+    indexOf()
     
 -SASS + BEM-\
--LocalStorage-\
+-LocalStorage-
     
 
     
