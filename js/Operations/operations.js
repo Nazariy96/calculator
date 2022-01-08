@@ -21,17 +21,25 @@ const clearAll = () => {
 
 let prevData = [];
 const solution = () => {
+  let btnRound = document.querySelector(".prec");
   let data = currOutput.value;
   let res;
-  let btnRound = document.querySelector(".prec");
+
+  const evalStr = (str) => {
+    let sol = new Function("return " + str)();
+    return sol;
+  };
+  
   btnRound.value === "false"
-    ? (res = eval(data))
-    : (res = parseFloat(eval(data)).toFixed(3));
-  if (res === undefined || res === "NaN") {
-    return;
+    ? (res = evalStr(data))
+    : (res = parseFloat(evalStr(data)).toPrecision(3));
+
+  if (res === undefined || res === NaN) {
+    return console.log("undefined or NaN");
   } else {
-    let disRes = (prevOutput.value = data + "=" + res);
+    let disRes = (prevOutput.value = data.concat(`=${res}`));
     currOutput.value = "";
+    console.log(disRes);
     prevData.unshift(disRes);
     localStorage.setItem("prevData", JSON.stringify(prevData));
   }
@@ -66,7 +74,6 @@ const moveDir = (dir) => {
     currOutput.value = prevValPos.split("=")[1];
   } else {
     let opPosition = localData.indexOf(prevOutput.value);
-
     if (prevOutput.value === localData[opPosition]) {
       switch (dir) {
         case "prv":
