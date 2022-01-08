@@ -1,21 +1,21 @@
-# calculator
+# ***Calculator***
 
 Calculator with basics functions, for practice basics of:
 
-##-DOM-
+### -DOM-
   * Manipulation and dynamic generation
 
-##-JavaScript-
+### -JavaScript-
   * Methods used:
     * ~~eval()~~ -> new Function()
     * parseFloat()
-    * toFixed()
+    * ~~toPrecision()~~ -> toFixed()
     * split()
     * slice()
     * indexOf()
     
-##-SASS + BEM-\
-##-LocalStorage-
+### -SASS + BEM-\
+### -LocalStorage-
 
 
     
