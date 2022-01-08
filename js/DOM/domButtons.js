@@ -1,14 +1,14 @@
 const createBtns = () => {
   
-  const btnSymbol = [
+  const btnSymbols = [
     "CE",
     "<<",
     ">>",
     "DEL",
     "(",
-    "%",
     "F",
     ")",
+    "%",
     "1",
     "2",
     "3",
@@ -27,48 +27,47 @@ const createBtns = () => {
     "/",
   ];
 
-  for (let i = 0; i < btnSymbol.length; i++) {
-    const e = btnSymbol[i];
+  for (const symbol of btnSymbols) {
 
     const btn = document.createElement("button");
-    btn.innerHTML = e;
+    btn.innerHTML = symbol;
     btn.className = "c-calc_btns-btn";
 
     if (
-      e !== "CE" &&
-      e !== "DEL" &&
-      e !== "=" &&
-      e !== "<<" &&
-      e !== ">>" &&
-      e !== "F"
+      symbol !== "CE" &&
+      symbol !== "DEL" &&
+      symbol !== "=" &&
+      symbol !== "<<" &&
+      symbol !== ">>" &&
+      symbol !== "F" 
     ) {
       btn.onclick = () => {
-        displayNum(e);
+        displayNum(symbol);
       };
     } else {
       let f;
 
-      if (e === ">>") {
+      if (symbol === ">>") {
         f = next;
         btn.className += " nxt";
       }
-      if (e === "<<") {
+      if (symbol === "<<") {
         f = previous;
         btn.className += " prv";
       }
-      if (e === "CE") {
+      if (symbol === "CE") {
         f = clearAll;
         btn.className += " clr";
       }
-      if (e === "DEL") {
+      if (symbol === "DEL") {
         f = deleteNum;
         btn.className += " del";
       }
-      if (e === "=") {
+      if (symbol === "=") {
         f = solution;
         btn.className += " sol";
       }
-      if (e === "F") {
+      if (symbol === "F") {
         f = precision;
         btn.className += " prec";
         btn.value = false;
