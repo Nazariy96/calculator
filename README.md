@@ -2,20 +2,20 @@
 
 Calculator with basics functions, for practice basics of:
 
--DOM-
+##-DOM-
   * Manipulation and dynamic generation
 
--JavaScript-
+##-JavaScript-
   * Methods used:
-    * eval()
+    * ~~eval()~~ -> new Function()
     * parseFloat()
     * toFixed()
     * split()
     * slice()
     * indexOf()
     
--SASS + BEM-\
--LocalStorage-
+##-SASS + BEM-\
+##-LocalStorage-
 
 
     
