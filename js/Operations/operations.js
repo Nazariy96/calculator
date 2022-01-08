@@ -32,7 +32,7 @@ const solution = () => {
   
   btnRound.value === "false"
     ? (res = evalStr(data))
-    : (res = parseFloat(evalStr(data)).toPrecision(3));
+    : (res = parseFloat(evalStr(data)).toFixed(2));
 
   if (res === undefined || res === NaN) {
     return console.log("undefined or NaN");
