@@ -14,7 +14,7 @@ Calculator with basics functions, for practice basics of:
     * slice()
     * indexOf()
     
-### -SASS + BEM-\
+### -SASS + BEM-
 ### -LocalStorage-
 
 
